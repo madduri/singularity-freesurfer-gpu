@@ -55,6 +55,8 @@ From: ubuntu:16.04
     FREESURFER_GZ=$(basename $FREESURFER)
     wget --no-check-certificate $FREESURFER
     tar -xzf $FREESURFER_GZ -C /opt
+    # Fake License - should be replaced by a real one
+    touch license.txt
     cp license.txt /opt/freesurfer/license.txt
     # Cleanup
     rm -rf get-pip.py
